@@ -25,9 +25,7 @@ if __name__ == '__main__':
         keras.layers.Dense(units=30, activation='relu'),
         keras.layers.Dropout(0.4),
         keras.layers.Dense(units=20, activation='relu'),
-        keras.layers.Dropout(0.4),
         keras.layers.Dense(units=10, activation='relu'),
-        keras.layers.Dropout(0.4),
         keras.layers.Softmax()  # Softmax() has the same shape as its input
     ])
 
@@ -61,6 +59,8 @@ if __name__ == '__main__':
     classes = model.predict(hog_feature)
     class_est = np.argmax(classes)
     print('Predicted classes: {}'.format(class_est))
+
+    
 
 
 # %%
